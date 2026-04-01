@@ -71,6 +71,17 @@
   margin-top: var(--space-lg);
 }
 
+.unlock-teaser {
+  margin-top: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-primary-bg);
+  border: 1px dashed var(--color-primary);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
 .cost-deal-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-secondary); margin-bottom: var(--space-xs); }
 .cost-deal-value { font-size: 56px; font-weight: 800; color: var(--color-primary); line-height: 1; }
 .cost-deal-context { font-size: 14px; color: var(--color-text-secondary); margin-top: var(--space-sm); }
