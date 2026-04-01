@@ -233,6 +233,13 @@ export default function App() {
                   </p>
                 )}
               </div>
+
+              {/* Teaser Vue Direction */}
+              {!valeurContrat && (
+                <div className="unlock-teaser">
+                  🔓 Entre la valeur d'un contrat ci-dessous pour voir le <strong>ROI et pipeline mensuel</strong>.
+                </div>
+              )}
             </div>
 
             {/* Vue Marketing */}
