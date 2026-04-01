@@ -1,4 +1,4 @@
-import { useState, useRef, useMemo } from "react"
+import { useState, useRef, useMemo, useEffect } from "react"
 import Lottie from "lottie-react"
 import "./index.css"
 import "./App.css"
@@ -72,7 +72,7 @@ function LottieBtn({ href, children }) {
   const lottieRef1 = useRef(null)
   const lottieRef2 = useRef(null)
   const [animData, setAnimData] = useState(null)
-  useState(() => { fetch("/lottie-btn.json").then(r => r.json()).then(setAnimData).catch(() => {}) })
+  useEffect(() => { fetch("/lottie-btn.json").then(r => r.json()).then(setAnimData).catch(() => {}) }, [])
 
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="btn btn--primary lottie-btn"
@@ -179,29 +179,6 @@ export default function App() {
               placeholder="Ex : 200"
               value={leads}
               onChange={setLeads}
-            />
-          </div>
-
-          <div className="section-label" style={{ marginTop: "var(--space-lg)" }}>Tes taux de conversion</div>
-          <div className="grid-2">
-            <SliderInput
-              label="% de leads transmis aux commerciaux"
-              tooltip="Sur 100 leads, combien méritent vraiment un appel commercial ?"
-              value={tauxQual}
-              onChange={setTauxQual}
-              min={1}
-              max={100}
-              step={1}
-              suffix="%"
-            />
-            <SliderInput
-              label="% de leads qualifiés qui signent"
-              value={tauxClosing}
-              onChange={setTauxClosing}
-              min={1}
-              max={100}
-              step={1}
-              suffix="%"
             />
           </div>
 
